@@ -21,6 +21,7 @@
 .title {
     display: flex;
     justify-content: center;
+    text-align: center;
     font-size: 50px;
 }
 
@@ -49,4 +50,20 @@
     cursor: pointer;
     background-color: black;
     color: white;
+}
+
+@media (max-width: 600px) {
+
+.middleDisc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.mainGuy {
+    margin-right: 30px;
+}
+
 }

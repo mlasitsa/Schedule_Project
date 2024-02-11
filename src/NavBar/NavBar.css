@@ -66,24 +66,25 @@ nav .burger-menu span {
     border-radius: 0.2rem;
 }
 
-.nav-active {
-    display: flex;
-  }
-
-
   @media (max-width: 950px) {
-    /* Adjust nav for mobile */
+    
     nav {
-        justify-content: flex-start; /* Align items to the start */
-        padding-left: 1rem; /* Add padding to ensure content isn't touching the screen edge */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 
-    /* Show the burger menu icon */
+    nav .logo {
+        display: flex;
+        margin-right: 500px;
+    }
+
+
     nav .burger-menu {
         display: flex;
     }
 
-    /* Hide the list of links initially */
+    
     nav ul {
         display: none;
         width: 100%;
@@ -91,20 +92,32 @@ nav .burger-menu span {
         margin-bottom: 0.25rem;
     }
 
-    /* Ensure that the links take up the full width and are centered when active */
     .nav-active {
         display: flex;
-        align-items: center; /* Center items vertically */
-        justify-content: center; /* Center items horizontally */
+        align-items: center; 
+        justify-content: center; 
+        text-align: center;
     }
+    
 
     nav ul li {
-        width: 100%; /* Full width to each list item */
-        text-align: center; /* Center text in each list item */
+        width: 85%; 
+        text-align: left;
+        margin-right: 20px;
+         
     }
 
     nav ul li a {
         padding: 0.5rem;
-        margin: 0.2rem 0; /* Adjust margin for spacing */
+        margin: 0.2rem 0; 
+    }
+
+}
+
+@media (max-width: 615px) {
+
+    nav .logo {
+        display: flex;
+        margin-right: 300px;
     }
 }
