@@ -1,0 +1,28 @@
+.contactPage h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+.contactPage .title {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.contactPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contactPage .button123 {
+
+}
