@@ -15,7 +15,7 @@ function ContactUsPage() {
             <button className='button123'>Phone: (123) 456-7890 (Monday - Friday, 9 AM - 5 PM)</button>
             <button className='button123'>Check our FAQ page</button>
 
-            <button className='form'>Contact Form: Fill out your details below, 
+            <button className='formButton'>Contact Form: Fill out your details below, 
                 and we'll get back to you as soon as possible
                 </button>
         </div>
