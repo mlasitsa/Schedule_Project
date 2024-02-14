@@ -9,6 +9,7 @@
 .description {
     display: flex;
     align-self: center;
+    font-weight: bold;
 }
 
 .mainGuy {
@@ -40,6 +41,7 @@
     font-size: 1rem; 
     cursor: pointer; 
     background-color: white;
+    font-weight: bold;
 }
 
 .signUpBtn {
@@ -50,6 +52,7 @@
     cursor: pointer;
     background-color: black;
     color: white;
+    font-weight: bold;
 }
 
 @media (max-width: 600px) {
