@@ -33,3 +33,66 @@ div .title {
         margin-right: 50px;
     }
 }
+
+@media(max-width: 1380px) {
+    .guy-stairs {
+        margin-left: 100px;
+    }
+}
+
+@media(max-width: 1280px) {
+    
+    .content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .box-description {
+        display: flex;
+        margin-top: 400px;
+        text-align: center;
+        margin-left: 125px;
+    }
+
+    .guy-stairs {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        margin-left: 350px;
+        margin-top: 50px;
+    }
+
+}
+
+@media(max-width: 1115px) {
+
+   
+    
+    .box-description {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-right: 120px;
+    }
+
+    .guy-stairs {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        margin-right: 350px;
+    }
+}
+
+@media(max-width: 950px) {
+
+    .guy-stairs {
+        display: flex;
+        max-width: 300px;
+        max-height: 300px;
+        margin-left: 280px;
+    }
+
+}
