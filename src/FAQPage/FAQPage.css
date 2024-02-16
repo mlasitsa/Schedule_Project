@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.accordion {
+    max-width: 500px;
+    margin-top: 200px;
+}
+
+.faqpage-item {
+    margin-bottom: 5px;
+    padding: 10px 20px;
+}
+
+.faqpage-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.faqpage-dot {
+    margin-left: 10px;
+}
+
+.faqpage-content {
+    display: none; 
+  }
+
+
+.faqpage-header {
+    text-align: center;
+}
