@@ -9,6 +9,7 @@ import ContactUsPage from '/src/ContactUsPage/ContactUsPage'
 import MainPage from '/src/MainPage/MainPage'
 import PricingPage from '/src/PricingPage/PricingPage'
 import FAQPage from '/src/FAQPage/FAQPage'
+import FooterMenu from './FooterMenu/FooterMenu'
 
 function App() {
 
@@ -24,6 +25,10 @@ function App() {
       <Route path='/contact' element={<ContactUsPage />} />
       <Route path='/login' element={<LoginPage />} />
     </Routes>
+    <div className='footerMenu-margin'>
+    <FooterMenu />
+    </div>
+    
     </div>
   )
 }
