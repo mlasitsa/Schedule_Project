@@ -1,6 +1,6 @@
 import React from 'react';
 import '/src/FAQPage/FAQPage.css';
-import { FAQData } from '../FAQData';
+import { FAQData } from './FAQData';
 import { useState } from 'react';
 
 function FAQPage() {

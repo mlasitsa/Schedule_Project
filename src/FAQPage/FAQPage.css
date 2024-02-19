@@ -44,6 +44,10 @@
     cursor: pointer;
 }
 
+.faqpage-title h2{
+    width: 300px;
+}
+
 .faqpage-content {
     color: white; 
     max-height: 0;

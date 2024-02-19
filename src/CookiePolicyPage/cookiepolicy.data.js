@@ -19,7 +19,6 @@ const cookiedata = [
         title: 'Policy Updates:',
         description: 'This policy may be updated periodically. Users will be informed of significant changes through our platform or via email.',
     },
-
 ]
 
 export default cookiedata;

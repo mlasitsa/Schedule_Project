@@ -10,23 +10,25 @@ const [isHovered, setIsHovered] = useState(null);
 
 
     return (
-        <div className='cookiePolicyPage-page'>
+        <div>
             <h1 className='cookiePolicyPage-title'>COOKIE POLICY</h1>
             <p className='cookiePolicyPage-description'> Schedule.io uses cookies to enhance user experience, analyze platform performance, and personalize content.</p>
             <div className='cookiePolicyPage-box'>
+                <div className='cookiePolicyPage-answer'>
                     {cookiedata.map((cookie,index) => (
                         <div className='cookiePolicyPage-content' 
                             onMouseEnter={() => setIsHovered(index)}
                             onMouseLeave={() => setIsHovered(null)}>
                         
+                        <div className={isHovered == index ? 'cookiePolicyPage-rectangle-active':'cookiePolicyPage-rectangle'}> 
                             <h4 className={isHovered == index ? 'cookiePolicyPage-content-active': 'cookiePolicyPage-content'}>{cookie.title}</h4>
                             <p className={isHovered == index ? 'cookiePolicyPage-content-active':'cookiePolicyPage-content'}>{cookie.description}</p>
-                    
                         </div>
+                        </div>
+                
                     ))}
-                        <div className='cookiePolicy-image'>
+                </div>  
                         <img src={cookiespolicylogo}></img>
-                        </div>
             </div>
         </div>
     )
