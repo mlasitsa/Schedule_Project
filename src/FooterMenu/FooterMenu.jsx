@@ -11,54 +11,54 @@ function FooterMenu() {
             <div className='footerMenu section-padding'>
                 <div className='footerMenu-footer-links'>
                     <div className='footerMenu-footer-links-div'>
-                        <h4>For Business</h4>
-                        <a className='footerMenu-a' href='/employer'>
-                            <p>Employer</p>
+                        <h4>Quick Links</h4>
+                        <a className='footerMenu-a' href='/features'>
+                            <p>Features</p>
                         </a>
-                        <a className='footerMenu-a' href='/healthplan'>
-                            <p>Health Plan</p>
+                        <a className='footerMenu-a' href='/pricing'>
+                            <p>Pricing</p>
                         </a>
-                        <a className='footerMenu-a' href='/individual'>
-                            <p>Individual</p>
+                        <a className='footerMenu-a' href='/login'>
+                            <p>Login/Sign Up</p>
                         </a>
                     </div>
                     <div className='footerMenu-footer-links-div'>
-                        <h4>Resources</h4>
+                        <h4>Contact Information</h4>
                         <a className='footerMenu-a' href='/resource'>
-                            <p>Resource Center</p>
+                            <p>support@schedule.io</p>
                         </a>
                         <a className='footerMenu-a' href='/resource'>
-                            <p>Testimonials</p>
+                            <p>+1 (929) 708 - 25 - 09</p>
                         </a>
                         <a className='footerMenu-a' href='/resource'>
-                            <p>TV</p>
+                            <p>1200 Kenwood Ave, Duluth, MN, 55811</p>
                         </a>
                     </div>
                     <div className='footerMenu-footer-links-div'>
                         <h4>Partners</h4>
-                        <a className='footerMenu-a' href='/partners'>
+                        <a className='footerMenu-a' href='https://www.css.edu/' target="_blank" rel="noopener noreferrer">
                             <p>The College of St. Scholastica</p>
                         </a>
-                        <a className='footerMenu-a' href='/partners'>
-                            <p>CodePath</p>
+                        <a className='footerMenu-a' href='https://www.linkedin.com/in/kris-glesener/' target="_blank" rel="noopener noreferrer">
+                            <p>Kris Glesener</p>
                         </a>
-                        <a className='footerMenu-a' href='/partners'>
-                            <p>Computer Science</p>
+                        <a className='footerMenu-a' href='https://www.linkedin.com/in/maxlasitsa/' target="_blank" rel="noopener noreferrer">
+                            <p>Maxim Lasitsa</p>
                         </a>
                     </div>
                     <div className='footerMenu-footer-links-div'>
                         <h4>Company</h4>
-                        <a className='footerMenu-a' href='/company'>
+                        <a className='footerMenu-a' href='/about'>
                             <p>About Us</p>
                         </a>
-                        <a className='footerMenu-a' href='/press'>
-                            <p>Press</p>
-                        </a>
-                        <a className='footerMenu-a' href='/career'>
-                            <p>Career</p>
+                        <a className='footerMenu-a' href='/faq'>
+                            <p>FAQ</p>
                         </a>
                         <a className='footerMenu-a' href='/contact'>
                             <p>Contact Us</p>
+                        </a>
+                        <a className='footerMenu-a' href='/login'>
+                            <p>Login/Sign Up</p>
                         </a>
                     </div>
                     <div className='footerMenu-footer-links-div'>
@@ -76,13 +76,13 @@ function FooterMenu() {
             <div className='footerMenu-footer-below'>
                 <div className='footerMenu-footer-copyright'>
                     <p>
-                        @{new Date().getFullYear} Schedule.io All rights reserved.
+                        ©{new Date().getFullYear()} Schedule.io All rights reserved.
                     </p>
                 </div>
                 <div className='footerMenu-footer-below-links'>
-                    <a className='footerMenu-a' href='/terms'><div><p>Terms & Conditions</p></div></a>
-                    <a className='footerMenu-a' href='/privacy'><div><p>Privacy</p></div></a>
-                    <a className='footerMenu-a' href='/security'><div><p>Security</p></div></a>
+                    <a className='footerMenu-a' href='/termsnconditions'><div><p>Terms & Conditions</p></div></a>
+                    <a className='footerMenu-a' href='/privacypolicy'><div><p>Privacy Policy</p></div></a>
+                    <a className='footerMenu-a' href='/cookiepolicy'><div><p>Cookie Policy</p></div></a>
                 </div>
             </div>
             </div>
