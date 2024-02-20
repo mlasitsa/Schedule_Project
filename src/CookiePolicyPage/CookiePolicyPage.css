@@ -27,7 +27,6 @@
     align-self: center;
     width: 400px;
     height: 400px;
-
 }
 
 .cookiePolicyPage-content {
@@ -57,4 +56,38 @@
     border-radius: 15px;
     margin-top: 10px;
     align-self: center;
+}
+
+.cookiePolicyPage-rectangle h4 {
+    margin-left: 15px;
+    margin-left: 15px;
+}
+
+.cookiePolicyPage-rectangle p {
+    margin-left: 15px;
+    margin-left: 15px;
+}
+
+.cookiePolicyPage-rectangle-active h4 {
+    margin-left: 15px;
+    margin-left: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+.cookiePolicyPage-rectangle-active p {
+    margin-left: 15px;
+    margin-left: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+@media (max-width: 996px) {
+    .cookiePolicyPage-box img {
+        display: flex;
+        align-self: center;
+        width: 400px;
+        height: 400px;
+        margin-top: 30px;
+    }
 }

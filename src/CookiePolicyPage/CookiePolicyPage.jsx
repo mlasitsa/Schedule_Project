@@ -21,8 +21,8 @@ const [isHovered, setIsHovered] = useState(null);
                             onMouseLeave={() => setIsHovered(null)}>
                         
                         <div className={isHovered == index ? 'cookiePolicyPage-rectangle-active':'cookiePolicyPage-rectangle'}> 
-                            <h4 className={isHovered == index ? 'cookiePolicyPage-content-active': 'cookiePolicyPage-content'}>{cookie.title}</h4>
-                            <p className={isHovered == index ? 'cookiePolicyPage-content-active':'cookiePolicyPage-content'}>{cookie.description}</p>
+                            <h4 className={isHovered == index ? 'cookiePolicyPage-rectangle-active-h4': ''}>{cookie.title}</h4>
+                            <p className={isHovered == index ? 'cookiePolicyPage-rectangle-active-p':''}>{cookie.description}</p>
                         </div>
                         </div>
                 
