@@ -9,36 +9,62 @@ import policydata from './privacypolicy.data';
 function PrivacyPolicyPage() {
 
     const [isHovered, setIsHovered] = useState(null);
-   
-// I can make a new array that would have same data as originla one,
-// then split this array in two arrays and map twice ??? 
+    const splitPoint = ((polictydata.length/2));
+    const rightText = polictydata.slice(0,splitPoint);
+    const leftText = polictydata.slice(splitPoint);
+
+    console.log(rightText);
+    console.log(leftText);
+
 
     return (
         <div>
             <h1 className='privacyPolicyPage-title'>PRIVACY POLICY</h1>
             <p className='privacyPolicyPage-description'>We value your privacy and are committed to protecting your personal information. This policy outlines the types of information we collect, how it's used, and safeguarded</p>
             <div className='privacyPolicyPage-box'>
-                <div className='privacyPolicyPage-answer'>
-                    {polictydata.map((policy,index) => (
+                
+                <div className='privacyPolicyPage-answer-row-reverse'>
+                <div className='privacyPolicyPage-column'>
+                    {rightText.map((policy,index) => (
                     <div 
                         onMouseEnter={() => setIsHovered(index)}
                         onMouseLeave={() => setIsHovered(null)}>
-
-                    <div className={index <= ((policydata.length)/2 - 1) ? 'privacyPolicy-text-right':'privacyPolicy-text-left'}>
+                   
+                    <div className='privacyPolicyPage-text-right'>
                         <h4 className={isHovered == index ? '': ''}>{policy.policyName}</h4>
-                        <p className={isHovered == index ? '': ''}>{policy.policyAnswer}</p>
-                    </div>  
+                        <p className={isHovered == index ? '': ''}>{policy.policyAnswer}</p> 
+                    </div>
+                   
+                    
+                    </div>
+                
+                ))}
+                </div>
+
+                    <div className='privacypolicy-image-left'>
+                        <img src={privacypolicypagelogo}></img>  
+                    </div>
+                </div>
+               
+                        
+                
+                <div className='privacyPolicyPage-answer-row'>
+                <div className='privacyPolicyPage-column'>
+                    {leftText.map((policy,index) => (
+                    <div className='privacyPolicyPage-text-left'
+                        onMouseEnter={() => setIsHovered(index)}
+                        onMouseLeave={() => setIsHovered(null)}>
+
+                        <h4 className={isHovered == index ? '': ''}>{policy.policyName}</h4>
+                        <p className={isHovered == index ? '': ''}>{policy.policyAnswer}</p> 
                     </div>
                 ))}
-
                 </div>
-                        <div className='privacypolicy-image-left'>
-                            <img src={privacypolicypagelogo}></img>  
-                        </div>
+                    <div className='privacypolicy-image-right'>
+                        <img src={privacypolicypagelogotwo}></img> 
+                    </div>
+                </div>
                         
-                        <div className='privacypolicy-image-right'>
-                            <img src={privacypolicypagelogotwo}></img> 
-                        </div>
                         
             </div>        
         </div>
