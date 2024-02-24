@@ -3,15 +3,25 @@ import {Link, NavLink} from 'react-router-dom';
 import '/src/NavBar/NavBar.css';
 import logo from '/logo.png';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 function NavBar() {
 
 const [isOpen, setIsOpen] = useState(false);
 
-const toggleMenu = () => {
+const toggleMenu = (event) => {
+    event.stopPropagation(); 
     setIsOpen(!isOpen);
   };
+
+useEffect(() => {
+    const closeMenu = () => {
+      if (isOpen) setIsOpen(false);
+    };
+    document.addEventListener('click', closeMenu);
+    return () => document.removeEventListener('click', closeMenu);
+  }, [isOpen]); 
 
 return (
     <nav>
