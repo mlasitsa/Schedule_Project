@@ -4,3 +4,70 @@
     text-align: center;
     font-size: 50px;
 }
+
+.termsOfUsePage-description {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+.termsOfUsePage-box {
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px; 
+    align-items: center;
+}
+
+
+.termsOfUsePage-answer-row-reverse {
+    display: flex;
+    margin: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.termsOfUsePage-column {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.termsOfUsePage-answer-row {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.termsOfUsePage-text-right {
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    padding: 0 20px; 
+    justify-content: center;
+}
+
+.termsOfUsePage-text-left {
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    padding: 0 20px; 
+    justify-content: center;
+}
+
+.termsOfUsePage-text-right {
+    max-width: 400px;
+    display: flex;
+}
+
+.termsOfUsePage-text-right h4,
+.termsOfUsePage-text-left h4 {
+    color: #FAE347;
+}

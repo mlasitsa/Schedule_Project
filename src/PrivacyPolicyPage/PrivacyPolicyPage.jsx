@@ -4,7 +4,7 @@ import privacypolicypagelogo from '/privacypolicylogo.png';
 import privacypolicypagelogotwo from '/privacypolicypagelogotwo.png';
 import polictydata from './privacypolicy.data';
 import { useState } from 'react';
-import policydata from './privacypolicy.data';
+
 
 function PrivacyPolicyPage() {
 
@@ -12,10 +12,6 @@ function PrivacyPolicyPage() {
     const splitPoint = ((polictydata.length/2));
     const rightText = polictydata.slice(0,splitPoint);
     const leftText = polictydata.slice(splitPoint);
-
-    console.log(rightText);
-    console.log(leftText);
-
 
     return (
         <div>
