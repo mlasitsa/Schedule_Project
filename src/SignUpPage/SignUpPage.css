@@ -1,0 +1,86 @@
+.signUpPage-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+}
+
+.signUpPage-description {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+.signUpPage-middle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 80px auto;
+}
+
+.signUpPage-box {
+    display: flex;
+    background-color: white;
+    color: black;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 450px;
+    text-align: center;
+    min-width: 400px;
+    max-width: 500px;
+    border-radius: 20px;
+    font-weight: bold
+}
+
+.signUpPage-form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.signUpPage-enterForm {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 400px;
+    max-height: 100px;
+    margin: auto;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.signUpPage-error {
+    color: red; 
+    background-color: #ffecec;
+    border: 1px solid red; 
+    border-radius: 5px; 
+    padding: 10px; 
+    margin-top: 10px; 
+    text-align: center; 
+    font-weight: bold; 
+  }

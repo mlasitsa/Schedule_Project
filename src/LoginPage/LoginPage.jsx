@@ -1,7 +1,16 @@
 import React from 'react';
 import '/src/LoginPage/LoginPage.css';
+import { useNavigate } from 'react-router-dom';
+
 
 function LoginPage() {
+
+   let signUpPage = useNavigate();
+
+   const toSignUp = () => {
+    signUpPage('/signup')
+   };
+
     return (
         <>
 
@@ -14,12 +23,16 @@ function LoginPage() {
 
                 <div className='loginPage-enterForm'>
                     <label htmlFor='email'>EMAIL</label>
-                    <input className='loginPage-input' type='email' placeholder='Enter Email'></input>
+                    <input className='loginPage-input' 
+                            type='email' 
+                            placeholder='Enter Email' required></input>
                 </div>
 
                 <div className='loginPage-enterForm'>
                     <label htmlFor='password'>PASSWORD</label>
-                    <input className='loginPage-input' type='password' placeholder='Enter Password'></input>
+                    <input className='loginPage-input' 
+                            type='password' 
+                            placeholder='Enter Password' required></input>
                 </div>
 
                 <div className='loginPage-policy'>
@@ -27,7 +40,7 @@ function LoginPage() {
                 </div>
 
                 <div className='loginPage-buttons'>
-                    <button className='loginPage-button1'>CREATE AN ACCOUNT</button>
+                    <button className='loginPage-button1' onClick={toSignUp}>CREATE AN ACCOUNT</button>
                     <button className='loginPage-button2'>LOGIN</button>
                 </div>
 

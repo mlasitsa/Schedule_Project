@@ -13,6 +13,7 @@ import FooterMenu from './FooterMenu/FooterMenu'
 import TermsOfUsePage from './TermsOfUsePage/TermsOfUsePage'
 import PrivacyPolicyPage from './PrivacyPolicyPage/PrivacyPolicyPage'
 import CookiePolicyPage from './CookiePolicyPage/CookiePolicyPage'
+import SignUpPage from './SignUpPage/SignUpPage'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <Route path='/termsnconditions' element={<TermsOfUsePage />} />
       <Route path='/privacypolicy' element={<PrivacyPolicyPage />} />
       <Route path='/cookiepolicy' element={<CookiePolicyPage />} />
+      <Route path='/signup' element={<SignUpPage />} />
     </Routes>
 
     <div className='footerMenu-margin'>
