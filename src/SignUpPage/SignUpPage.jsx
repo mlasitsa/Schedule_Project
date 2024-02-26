@@ -44,6 +44,8 @@ function SignUpPage() {
         <div className='signUpPage-box'>
             <form className='signUpPage-form' onSubmit={handleSubmit} action=''>
 
+            {passwordError && <div className='signUpPage-error'>{passwordError}</div>}
+
                 <div className='signUpPage-enterForm'>
                     <label htmlFor='name'>FULL NAME</label>
                     <input className='signUpPage-input' 
@@ -95,7 +97,7 @@ function SignUpPage() {
                     <button type="submit" className='signUpPage-button2'>SIGN UP</button>
                 </div>
 
-                {passwordError && <div className='signUpPage-error'>{passwordError}</div>}
+                
 
             </form>
         </div>
