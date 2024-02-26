@@ -120,6 +120,10 @@
     margin-top: -10px;
 }
 
+.signUpPage-text h4 {
+    font-size: 25px;
+}
+
 .signUpPage-error {
     color: red; 
     background-color: #ffecec;
