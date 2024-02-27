@@ -28,15 +28,22 @@ function SignUpPage() {
             return;
         }
 
-        setPasswordError('');
-        toLogIn();
+        const user = {
+            name: fullName,
+            email: email,
+            password: password,
+        }
 
-        /*
-        axios.post('http://localhost:3308/signup', values)
-        .then(toLogIn())
+
+        axios.post('http://localhost:3308/signup/signedup_users', user)
+        .then(response => {
+            console.log(response.data)
+            setPasswordError('');
+            toLogIn();
+        })
         .catch(err => console.log(err))
-        */
-    }
+        
+    };
 
 
     return (
