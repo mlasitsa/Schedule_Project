@@ -35,13 +35,14 @@ function SignUpPage() {
         }
 
 
-        axios.post('http://localhost:3308/signup/signedup_users', user)
+        axios.post('http://localhost:3308/signup', user)
         .then(response => {
             console.log(response.data)
             setPasswordError('');
             toLogIn();
+            
         })
-        .catch(err => console.log(err))
+        .catch(err => console.log(err)) 
         
     };
 
