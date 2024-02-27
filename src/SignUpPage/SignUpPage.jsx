@@ -3,6 +3,7 @@ import '/src/SignUpPage/SignUpPage.css'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import googleSignUpLogo from '/googleSignUpLogo.png';
+import axios from 'axios'
 
 function SignUpPage() {
 
@@ -29,6 +30,12 @@ function SignUpPage() {
 
         setPasswordError('');
         toLogIn();
+
+        /*
+        axios.post('http://localhost:3308/signup', values)
+        .then(toLogIn())
+        .catch(err => console.log(err))
+        */
     }
 
 
