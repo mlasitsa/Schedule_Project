@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(cors());
 
 
-mongoose.connect("mongodb+srv://mlasitsa:maxlas@schedulecluster.fdnhkev.mongodb.net/users")
+mongoose.connect("mongodb+srv://mlasitsa:maxlas@schedulecluster.fdnhkev.mongodb.net/users")  
 
 
 app.post('/signup', (req, res) => {
