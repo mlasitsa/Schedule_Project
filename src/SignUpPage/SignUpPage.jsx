@@ -28,16 +28,9 @@ function SignUpPage() {
             return;
         }
 
-        const user = {
-            name: fullName,
-            email: email,
-            password: password,
-        }
-
-
-        axios.post('http://localhost:3308/signup', user)
+        axios.post('http://localhost:3001/signup', {fullName, email, password})
         .then(response => {
-            console.log(response.data)
+            console.log(response)
             setPasswordError('');
             toLogIn();
             
@@ -70,7 +63,7 @@ function SignUpPage() {
                             placeholder='Enter Name' 
                             required
                             value={fullName}
-                            onChange={(el) => setFullName(el.target.value)}>    
+                            onChange={(el) => setFullName(el.target.value)}>      
                     </input>
                 </div>
 
