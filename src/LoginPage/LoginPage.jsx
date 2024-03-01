@@ -15,7 +15,7 @@ function LoginPage() {
    let toHome = useNavigate();
    
    const goToHome = () => {
-    toHome('/')
+    toHome('/dashboard/welcome')
    }
 
    const toSignUp = () => {

@@ -18,11 +18,13 @@ app.post('/login', (req, res) => {
     UsersModel.findOne({email: email})
     .then(user => {
         if(user) {
-            if(user.password === password) {
-                res.json("Success")
-            }else {
-                res.json("The password is incorrect")
-            }
+            bcrypt.compare(password, user.password, (err,response) => {
+                if(response) {
+                    res.json("Success")
+                } else {
+                    res.json("The Password is incorrect")
+                }
+            })
         } else {
             res.json("You don't have an account")
         }
@@ -33,7 +35,7 @@ app.post('/signup', (req, res) => {
     const {fullName, email, password} = req.body;
     bcrypt.hash(password, 10)
     .then(hash => {
-        UsersModel.create({fullName, email, hash})
+        UsersModel.create({fullName, email, password: hash})
         .then(users => res.json(users))
         .catch(err => res.json(err))
     }).catch(err => console.log(err.message))

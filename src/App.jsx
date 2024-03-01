@@ -14,6 +14,7 @@ import TermsOfUsePage from './TermsOfUsePage/TermsOfUsePage'
 import PrivacyPolicyPage from './PrivacyPolicyPage/PrivacyPolicyPage'
 import CookiePolicyPage from './CookiePolicyPage/CookiePolicyPage'
 import SignUpPage from './SignUpPage/SignUpPage'
+import DashboardWelcomePage from './Software/DashboardWelcomePage/DasboardWelcomePage'
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
       <Route path='/privacypolicy' element={<PrivacyPolicyPage />} />
       <Route path='/cookiepolicy' element={<CookiePolicyPage />} />
       <Route path='/signup' element={<SignUpPage />} />
+      <Route path='/dashboard/welcome' element={<DashboardWelcomePage />} />
     </Routes>
 
     <div className='footerMenu-margin'>
