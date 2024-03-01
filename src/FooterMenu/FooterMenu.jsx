@@ -4,10 +4,23 @@ import {Link} from 'react-router-dom';
 import facebooklogo from '/facebooklogo.png';
 import instagramlogo from '/instagramlogo.png';
 import linkedinlogo from '/linkedinlogo.png';
+import { useLocation } from 'react-router-dom';
 
 function FooterMenu() {
+
+    const location = useLocation();
+
+    const footerClassName = () => {
+        if (location.pathname === '/dashboard/welcome') {
+            return 'footerMenu-footer-dashboard';
+        }
+        else {
+            return 'footerMenu-footer';
+        }
+    };
+
     return (
-        <div className='footerMenu-footer'>
+        <div className={footerClassName()}>
             <div className='footerMenu section-padding'>
                 <div className='footerMenu-footer-links'>
                     <div className='footerMenu-footer-links-div'>
@@ -71,7 +84,7 @@ function FooterMenu() {
                     </div>
                 </div>
 
-            <hr></hr>
+            <hr className='footerMenu-hr'></hr>
 
             <div className='footerMenu-footer-below'>
                 <div className='footerMenu-footer-copyright'>

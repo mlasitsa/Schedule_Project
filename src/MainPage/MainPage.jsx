@@ -1,8 +1,22 @@
 import React from "react";
 import mainPageLogo from '/mainPageLogo.png';
 import '/src/MainPage/MainPage.css';
+import { useNavigate } from "react-router-dom";
 
 function MainPage() {
+
+  const loginPage = useNavigate();
+  const signUpPage = useNavigate();
+
+  const toLogIn = () => {
+      loginPage('/login');
+  };
+
+  const toSignUp = () => {
+    signUpPage('/signup')
+  }
+
+
 
     return (
       <div>
@@ -24,8 +38,8 @@ function MainPage() {
         </div>
 
         <div className="buttons">
-          <button className="loginBtn">LOGIN</button>
-          <button className="signUpBtn">SIGN UP</button>
+          <button className="loginBtn" onClick={toLogIn}>LOGIN</button>
+          <button className="signUpBtn" onClick={toSignUp}>SIGN UP</button>
         </div>
         </div>
       

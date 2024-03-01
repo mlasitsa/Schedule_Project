@@ -1,3 +1,9 @@
+
+.dashboardWelcomePage-footer {
+    background-color: #B9DCE1;
+}
+
+
 .dasboardWelcomePage-title {
     display: flex;
     justify-content: center;
@@ -13,6 +19,8 @@
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 
