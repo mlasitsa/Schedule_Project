@@ -11,8 +11,9 @@ function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-   let signUpPage = useNavigate();
-   let toHome = useNavigate();
+   let signUpPage = useNavigate(); // CHANGE TO ONE LOCATION 
+   let toHome = useNavigate(); // CHANGE TO ONE LOCATION 
+
    axios.defaults.withCredentials = true;
    
    const goToHome = () => {
@@ -21,7 +22,7 @@ function LoginPage() {
 
    const toSignUp = () => {
     signUpPage('/signup')
-   };
+   };  
 
    const handleSubmit = (el) => {
     el.preventDefault();
