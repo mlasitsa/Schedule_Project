@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mainPageLogo from '/mainPageLogo.png';
 import '/src/MainPage/MainPage.css';
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function MainPage() {
 
   const loginPage = useNavigate();
   const signUpPage = useNavigate();
+  const dashboardMainPage = useNavigate();
 
   const toLogIn = () => {
       loginPage('/login');
@@ -15,6 +17,21 @@ function MainPage() {
   const toSignUp = () => {
     signUpPage('/signup')
   }
+
+  const toDashboardMainPage = () =>{
+    dashboardMainPage('/dashboard/welcome')
+  }
+
+  axios.defaults.withCredentials = true;
+    useEffect(() => {
+      axios.get('http://localhost:3001/')
+      .then(result => {console.log(result)
+        if (result.data === "Success") {
+        toDashboardMainPage();
+        }
+      })
+      .catch(err => console.log(err))
+    }, []) // MOST LIKELY NEED TO USE IT IN MY APP.JSX
 
 
 

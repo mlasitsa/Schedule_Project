@@ -13,6 +13,7 @@ function LoginPage() {
 
    let signUpPage = useNavigate();
    let toHome = useNavigate();
+   axios.defaults.withCredentials = true;
    
    const goToHome = () => {
     toHome('/dashboard/welcome')
