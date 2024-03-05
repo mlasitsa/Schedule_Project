@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import NavBar from '/src/NavBar/NavBar'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import LoginPage from '/src/LoginPage/LoginPage'
 import AboutUsPage from '/src/AboutUsPage/AboutUsPage'
 import FeaturesPage from '/src/FeaturesPage/FeaturesPage'
@@ -15,8 +15,29 @@ import PrivacyPolicyPage from './PrivacyPolicyPage/PrivacyPolicyPage'
 import CookiePolicyPage from './CookiePolicyPage/CookiePolicyPage'
 import SignUpPage from './SignUpPage/SignUpPage'
 import DashboardWelcomePage from './Software/DashboardWelcomePage/DasboardWelcomePage'
+import axios from 'axios'
+import { useEffect } from 'react'
+
 
 function App() {
+
+  const navigate = useNavigate();
+
+  const toDashboardMainPage = () =>{
+    navigate('/dashboard/welcome')
+  }
+
+  axios.defaults.withCredentials = true;
+  useEffect(() => {
+    axios.get('http://localhost:3001/')
+    .then(result => {console.log(result)
+      if (result.data === "Success") {
+      toDashboardMainPage();
+      }
+    })
+    .catch(err => console.log(err))
+  }, []) // MOST LIKELY NEED TO USE IT IN MY APP.JSX
+
 
   return (
     <div>

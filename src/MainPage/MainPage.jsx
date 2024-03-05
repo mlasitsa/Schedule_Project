@@ -6,34 +6,15 @@ import axios from "axios";
 
 function MainPage() {
 
-  const loginPage = useNavigate();
-  const signUpPage = useNavigate();
-  const dashboardMainPage = useNavigate();
+  const navigate = useNavigate();
 
   const toLogIn = () => {
-      loginPage('/login');
+      navigate('/login');
   };
 
   const toSignUp = () => {
-    signUpPage('/signup')
+      navigate('/signup')
   }
-
-  const toDashboardMainPage = () =>{
-    dashboardMainPage('/dashboard/welcome')
-  }
-
-  axios.defaults.withCredentials = true;
-    useEffect(() => {
-      axios.get('http://localhost:3001/')
-      .then(result => {console.log(result)
-        if (result.data === "Success") {
-        toDashboardMainPage();
-        }
-      })
-      .catch(err => console.log(err))
-    }, []) // MOST LIKELY NEED TO USE IT IN MY APP.JSX
-
-
 
     return (
       <div>
