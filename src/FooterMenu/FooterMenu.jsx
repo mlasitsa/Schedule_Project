@@ -11,7 +11,7 @@ function FooterMenu() {
     const location = useLocation();
 
     const footerClassName = () => {
-        if (location.pathname === '/dashboard/welcome') {
+        if (location.pathname.startsWith('/dashboard')) {
             return 'footerMenu-footer-dashboard';
         }
         else {

@@ -17,6 +17,10 @@ import SignUpPage from './SignUpPage/SignUpPage'
 import DashboardWelcomePage from './Software/DashboardWelcomePage/DasboardWelcomePage'
 import axios from 'axios'
 import { useEffect } from 'react'
+import DashboardPlanningPage from './Software/DashboardPlanningPage/DashboardPlanningPage'
+import DashboardProfilePage from './Software/DashboardProfilePage/DashboardProfilePage'
+import DashboardSchedulePage from './Software/DashboardSchedulePage/DashboardSchedulePage'
+import DashboardNotesPage from './Software/DashboardNotesPage/DashboardNotesPage'
 
 
 function App() {
@@ -55,6 +59,10 @@ function App() {
       <Route path='/cookiepolicy' element={<CookiePolicyPage />} />
       <Route path='/signup' element={<SignUpPage />} />
       <Route path='/dashboard/welcome' element={<DashboardWelcomePage />} />
+      <Route path='/dashboard/planning' element={<DashboardPlanningPage />} />
+      <Route path='/dashboard/profile' element={<DashboardProfilePage />} />
+      <Route path='/dashboard/schedule' element={<DashboardSchedulePage />} />
+      <Route path='/dashboard/notes' element={<DashboardNotesPage />} />
     </Routes>
 
     <div className='footerMenu-margin'>

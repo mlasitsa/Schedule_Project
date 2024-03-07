@@ -43,11 +43,11 @@ return (
         
         // Dashboard-specific links
         <>
-          <li><NavLink to="/dashboard/welcome">DASHBOARD</NavLink></li>
+          <li><NavLink to="/dashboard/welcome">WELCOME</NavLink></li>
           <li><NavLink to="/dashboard/profile">PROFILE</NavLink></li>
-          <li><NavLink to="/dashboard/academicplan">ACADEMIC PLAN</NavLink></li>
+          <li><NavLink to="/dashboard/planning">ACADEMIC PLAN</NavLink></li>
+          <li><NavLink to="/dashboard/schedule">SCHEDULE</NavLink></li>
           <li><NavLink to="/dashboard/notes">NOTES</NavLink></li>
-          <li><NavLink to="/dashboard/support">SUPPORT</NavLink></li>
           <li><NavLink to="/">SIGN OUT</NavLink></li>
         </>
       ) : (
