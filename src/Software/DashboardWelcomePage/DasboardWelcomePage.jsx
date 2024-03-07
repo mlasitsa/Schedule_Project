@@ -32,14 +32,15 @@ function DashboardWelcomePage() {
             <h1 className="dasboardWelcomePage-title">WE are glad that you are with us</h1>
 
             <div className="dasboardWelcomePage-mainContent"> 
-                <div className='dasboardWelcomePage-white-box'>
+                <div className={isModalOpen ? 'dasboardWelcomePage-box-unactive' : 'dasboardWelcomePage-white-box'}>
                     <div className="dasboardWelcomePage-box">
                         <h4>click here to 
                             complete your profile</h4>
                         <button onClick={openModal}>LETSGOOO</button>
-                        <DashboardWelcomeModal show={isModalOpen} onClose={closeModal}/>
                     </div>
                 </div>
+
+                <DashboardWelcomeModal show={isModalOpen} onClose={closeModal}/>
 
                 <div className="dasboardWelcomePage-picture">
                     <img src={slimeLogo}></img>

@@ -69,3 +69,7 @@
 
     margin-top: 50px;
 }
+
+.dasboardWelcomePage-box-unactive {
+    display: none;
+}
