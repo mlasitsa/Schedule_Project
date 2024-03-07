@@ -37,6 +37,8 @@ function DashboardWelcomeModal({show, onClose}) {
     return (
         <div className='dashboardWelcomeModal-box'>
             <form onSubmit={handleSubmit}>
+            
+            <div className='dashboardWelcomeModal-dropmenu'>
                 <label>
                     Degree
                         <select 
@@ -46,7 +48,8 @@ function DashboardWelcomeModal({show, onClose}) {
                             {degrees.map((deg) => (
                             <option key={deg} value={deg}>{deg}</option>))}
                         </select>
-                </label> 
+                </label>
+
                 <label>
                     Year
                         <select 
@@ -77,6 +80,13 @@ function DashboardWelcomeModal({show, onClose}) {
                             <option key={deg} value={deg}>{deg}</option>))}
                         </select>
                 </label> 
+                
+            </div>
+            
+            <div className='dashboardWelcomeModal-buttons'>
+                <button>BACK</button>
+                <button>SUBMIT</button>
+            </div>
             </form>
         </div>
     )
