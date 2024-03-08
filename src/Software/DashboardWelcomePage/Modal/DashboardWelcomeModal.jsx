@@ -2,6 +2,7 @@ import React from 'react';
 import '/src/Software/DashboardWelcomePage/Modal/DashboardWelcomeModal.css'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import axios from 'axios';
 
 function DashboardWelcomeModal({show, onClose}) {
 
@@ -10,10 +11,10 @@ function DashboardWelcomeModal({show, onClose}) {
     const [major, setMajor] = useState('');
     const [minor, setMinor] = useState('');
 
-    const degrees = ['Bachelors', 'Masters','Phd'];
-    const years = ['1st Year', '2nd Year', '3rd Year', '4th Year'];
-    const majors = ['Computer Science' , 'Nursing', 'Finance', 'Law']
-    const minors = ['Computer Science' , 'Nursing', 'Finance', 'Law'];
+    const degrees = [null,'Bachelors', 'Masters','Phd'];
+    const years = [null,'1st Year', '2nd Year', '3rd Year', '4th Year'];
+    const majors = [null,'Computer Science' , 'Nursing', 'Finance', 'Law']
+    const minors = [null, 'None','Computer Science' , 'Nursing', 'Finance', 'Law'];
     
 
     if(!show) {
@@ -30,8 +31,21 @@ function DashboardWelcomeModal({show, onClose}) {
             minor: minor
         }
 
-        console.log(welcomeUserData)
-        onClose();
+        // console.log(welcomeUserData)
+        // onClose();
+        axios.patch('http://localhost:3001/updateProfile', welcomeUserData, {
+        withCredentials: true, // to send cookies, including the JWT token in this case
+        headers: {
+            'Content-Type': 'application/json'
+            }
+        })  
+        .then(response => {
+            console.log(response.data);
+            onClose(); // Close the modal on success
+        })
+            .catch(error => {
+            console.error('Error:', error.response ? error.response.data : error.message);
+        });
     }
 
     return (
@@ -39,53 +53,69 @@ function DashboardWelcomeModal({show, onClose}) {
             <form onSubmit={handleSubmit}>
             
             <div className='dashboardWelcomeModal-dropmenu'>
-                <label>
-                    Degree
-                        <select 
+                
+                <div className='dashboardWelcomeModal-label-select'>
+                    
+                    <label> 
+                        Degree 
+                    </label>
+
+                    <select 
                         value={degree} 
                         onChange={(e) => setDegree(e.target.value)}
                         required>
                             {degrees.map((deg) => (
                             <option key={deg} value={deg}>{deg}</option>))}
-                        </select>
-                </label>
+                    </select>
+                </div>
 
-                <label>
-                    Year
-                        <select 
+                 <div className='dashboardWelcomeModal-label-select'>           
+                    <label>
+                        Year
+                    </label>
+
+                    <select 
                         value={year} 
                         onChange={(e) => setYear(e.target.value)}
                         required>
                             {years.map((deg) => (
                             <option key={deg} value={deg}>{deg}</option>))}
-                        </select>
-                </label> 
-                <label>
-                    Major
-                        <select 
+                    </select>
+                </div>
+
+                <div className='dashboardWelcomeModal-label-select'>           
+                    <label>
+                        Major
+                    </label> 
+
+                    <select 
                         value={major} 
                         onChange={(e) => setMajor(e.target.value)}
                         required>
                             {majors.map((deg) => (
                             <option key={deg} value={deg}>{deg}</option>))}
-                        </select>
-                </label> 
-                <label>
-                    Minor
-                        <select 
+                    </select>
+                </div>
+
+                <div className='dashboardWelcomeModal-label-select'>
+                    <label>
+                        Minor
+                    </label>
+
+                    <select 
                         value={minor} 
                         onChange={(e) => setMinor(e.target.value)}
                         required>
                             {minors.map((deg) => (
                             <option key={deg} value={deg}>{deg}</option>))}
-                        </select>
-                </label> 
-                
+                    </select>
+                </div>  
             </div>
             
+
             <div className='dashboardWelcomeModal-buttons'>
-                <button>BACK</button>
-                <button>SUBMIT</button>
+                <button className='button1' onClick={onClose}>BACK</button>
+                <button className='button2'>SUBMIT</button>
             </div>
             </form>
         </div>

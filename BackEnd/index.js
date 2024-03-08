@@ -13,7 +13,7 @@ app.use(express.json())
 
 app.use(cors({
     origin: ["http://localhost:5173"],
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "PATCH"],
     credentials: true
 }));
 app.use(cookieParser()); 
@@ -28,10 +28,13 @@ const verifyUser = (req, res, next) => {
     } else {
         jwt.verify(token, 'jwt-secret-key', (err, decoded) => {
             if(err) return res.json("Token is not correct")
+            req.user = decoded;
             next()
         })
     }
 }
+
+
 
 app.get('/', verifyUser, (req, res) => {
     return res.json("Success")
@@ -68,6 +71,42 @@ app.post('/signup', (req, res) => {
 })
 
 
+app.patch('/updateProfile', verifyUser, async (req, res) => {
+    const { degree, year, major, minor } = req.body;
+    const userEmail = req.user.email; 
+
+    try {
+        const updatedUser = await UsersModel.findOneAndUpdate(
+            { email: userEmail }, 
+            { $set: { degree, year, major, minor }},
+            { new: true }
+        );
+        
+        if (!updatedUser) {
+            return res.status(404).json("User not found.");
+        }
+
+        res.json(updatedUser); 
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+app.get('/getStudentInfo', verifyUser, async(req, res) => {
+    const userEmail = req.user.email; 
+
+    try {
+        const userInfo = await UsersModel.findOne({ email: userEmail });
+        if (!userInfo) {
+            return res.status(404).json("User not found");
+        }
+
+        const { degree, year, major, minor } = userInfo;
+        res.json({ degree, year, major, minor });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
 app.listen(3001, () => {
     console.log("server is running")
 })
