@@ -1,5 +1,16 @@
 const mongoose = require("mongoose");
 
+const TodoSchema = new mongoose.Schema({
+    description: {
+        type: String,
+        required: true
+    },
+    completed: {
+        type: Boolean,
+        default: false
+    }
+});
+
 const UsersSchema = new mongoose.Schema({
     fullName: String,
     email: String,
@@ -19,7 +30,8 @@ const UsersSchema = new mongoose.Schema({
     minor: {
         type: String,
         required: false 
-    }
+    },
+    todos: [TodoSchema]
 })
 
 const UsersModel = mongoose.model("users", UsersSchema)
