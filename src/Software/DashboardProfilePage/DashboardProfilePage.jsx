@@ -62,7 +62,7 @@ function DashboardProfilePage() {
                 <img className='dasboardProfilePage-image' src={studentPic}></img>
 
             {(!popUp) ? 
-                <div className='dasboardProfilePage-info'>
+                <div className={isModalOpen ? 'dasboardProfilePage-info-unactive' : 'dasboardProfilePage-info'}>
                     <div className='dasboardProfilePage-info-row'> 
                         <h4>
                             Degree
@@ -111,11 +111,11 @@ function DashboardProfilePage() {
                         </div>
                     </div>
 
-                    <button className='dasboardProfilePage-button'>CHANGE</button>
+                    <button className='dasboardProfilePage-button' onClick={openModal}>CHANGE</button>
                 </div>
                 
                 : 
-                <div className='dasboardProfilePage-error'>
+                <div className={isModalOpen ? 'dasboardProfilePage-error-unactive': 'dasboardProfilePage-error'}>
                     <h4>OOOPS</h4>
                     <p>looks like you dont have this information please use button below 
                         to complete your profile</p>

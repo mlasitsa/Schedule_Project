@@ -107,6 +107,8 @@ app.get('/getStudentInfo', verifyUser, async(req, res) => {
         res.status(500).json({ message: error.message });
     }
 });
+
+
 app.listen(3001, () => {
     console.log("server is running")
 })
