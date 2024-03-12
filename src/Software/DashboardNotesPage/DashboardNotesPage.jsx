@@ -4,6 +4,9 @@ import { useState } from 'react';
 import slimeLogo from '/slimeLogo.png'
 import { useEffect } from 'react';
 import axios from 'axios';
+import todoMan from '/todoMan.png'
+import deleteTodologo from '/deleteTodo.png'
+import completeTodologo from '/completeTodo.png'
 
 function DashboardNotesPage() {
 
@@ -49,25 +52,38 @@ function DashboardNotesPage() {
     };
 
     return (
-        <div>
-            <h1>Notes</h1>
+        <>
+            <h1 className='dashboardNotesPage-title'>TODO LIST</h1>
+            <h4 className='dashboardNotesPage-description'>Here you can keep track of you need to do. You can cross or delete your completed tasks</h4>
+        
+        <div className='dashboardNotesPage-main-layout'>
+            <img src={todoMan}></img>
+        <div className='dashboardNotesPage-layout-map'>
+            <div className='dashboardNotesPage-input-layout'> 
             <input
+                className='dashboardNotesPage-input'
                 type="text"
                 value={task}
                 onChange={(e) => setTask(e.target.value)}
                 placeholder='ENTER TASK'
             />
-            <button onClick={addTask}>ADD</button>
+            <button className='dashboardNotesPage-input-button' onClick={addTask}>ADD</button>
+            </div>
+            
             {todos.map(todo => (
-                <div key={todo._id}>
+                <div className='dashboardNotesPage-todos' key={todo._id}>
                     <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
                         {todo.description}
                     </span>
-                    <button onClick={() => toggleCompleted(todo._id)}>Toggle</button>
-                    <button onClick={() => deleteTodo(todo._id)}>Delete</button>
+                    <div className='dashboardNotesPage-todos-buttons'>
+                        <img src={completeTodologo} className="dashboardNotesPage-todos-completeBtn" onClick={() => toggleCompleted(todo._id)}></img>
+                        <img src={deleteTodologo} className= "dashboardNotesPage-todos-deleteBtn" onClick={() => deleteTodo(todo._id)}></img>
+                    </div>
                 </div>
             ))}
+            </div>
         </div>
+        </>
     );
 }
 

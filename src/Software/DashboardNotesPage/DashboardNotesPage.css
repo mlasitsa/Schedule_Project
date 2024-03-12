@@ -1,4 +1,4 @@
-.dasboardNotesPage-title {
+.dashboardNotesPage-title {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -7,11 +7,97 @@
     color: black;
 }
 
-.dasboardNotesPage-description {
+.dashboardNotesPage-description {
     display: flex;
     justify-content: center;
     text-align: center;
     font-size: 25px;
     text-transform: uppercase;
     color: black;
+    margin-bottom: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
+
+.dashboardNotesPage-main-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dashboardNotesPage-layout-map {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.dashboardNotesPage-input-layout {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    width: 600px;
+  }
+  
+
+.dashboardNotesPage-input {
+    font-size: 1em; 
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    width: 530px; 
+  }
+  
+ 
+.dashboardNotesPage-input-button {
+    padding: 10px 20px;
+    background-color: #ffce00; 
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+
+.dashboardNotesPage-todos {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 10px; 
+  }
+  
+
+.dashboardNotesPage-todos span {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px 15px;
+    width: 280px;
+    background-color: #ffffff; 
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+
+.dashboardNotesPage-todos-buttons img {
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  
+.dashboardNotesPage-todos-completeBtn,
+.dashboardNotesPage-todos-deleteBtn {
+    width: 30px; 
+    height: 30px; 
+
+    
+  }
+  
+
+.dashboardNotesPage-todos-buttons img:hover {
+    transform: scale(1.1); 
+  }
