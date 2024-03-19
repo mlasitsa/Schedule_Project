@@ -1,5 +1,5 @@
 import React from 'react';
-import '/src/Software/DashboardWelcomePage/DasboardWelcomePage.css'
+import '/src/Software/DashboardPlanningPage/DashboardPlanningPage.css'
 import { useState } from 'react';
 import slimeLogo from '/slimeLogo.png'
 import { useEffect } from 'react';
@@ -16,22 +16,27 @@ function DashboardPlanningPage() {
       }, []);
 
     return (
-        <div className='dashboardWelcomePage-footer'>
-            <h1 className="dasboardWelcomePage-title">Academic planning</h1>
+        <div className=''>
+            <h1 className="dashboardPlanningPage-title">Academic planning</h1>
 
-            <div className="dasboardWelcomePage-mainContent"> 
-                <div className='dasboardWelcomePage-white-box'>
-                    <div className="dasboardWelcomePage-box">
-                        <h4>click here to 
-                            complete your profile</h4>
-                        <button>LETSGOOO</button>
-                    </div>
-                </div>
-
-                <div className="dasboardWelcomePage-picture">
-                    <img src={slimeLogo}></img>
-                </div>
-            </div>
+            <table className='dashboardPlanningPage-table'>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                    <th>Column 4</th>
+                    <th>Column 5</th>
+                    <th>Column 6</th>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                    <td>Data 5</td>
+                    <td>Data 6</td>
+                </tr>
+            </table>
         </div>
     )
 }
