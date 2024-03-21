@@ -63,6 +63,7 @@ function App() {
       <Route path='/dashboard/profile' element={<DashboardProfilePage />} />
       <Route path='/dashboard/schedule' element={<DashboardSchedulePage />} />
       <Route path='/dashboard/notes' element={<DashboardNotesPage />} />
+      <Route path='/dashboard/addClasses' element={<DashboardAddClassesPage />} />
     </Routes>
 
     <div className='footerMenu-margin'>
