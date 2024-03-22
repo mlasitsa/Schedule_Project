@@ -3,6 +3,7 @@ import '/src/Software/DashboardAddClasses/DashboardAddClasses.css'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import DashboardTableAdd from './DashboardTableAdd';
+import axios from 'axios';
 
 function DashboardAddClassesPage() {
 
@@ -33,6 +34,10 @@ function DashboardAddClassesPage() {
     setClasses(updatedClasses);
   };
 
+  const handleSubmit = (el) => {
+    el.preventDefault();
+    axios.post 
+  }
 
     useEffect(() => {
 
@@ -47,7 +52,6 @@ function DashboardAddClassesPage() {
         <div className=''>
             <h1 className="dashboardAddClassesPage-title">Academic planning</h1>
 
-            
 
             <DashboardTableAdd classes={classes} addClass={addNewClass} onInputChange={handleInputChange}/>
         </div>
