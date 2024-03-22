@@ -48,6 +48,7 @@ return (
           <li><NavLink to="/dashboard/planning">ACADEMIC PLAN</NavLink></li>
           <li><NavLink to="/dashboard/schedule">SCHEDULE</NavLink></li>
           <li><NavLink to="/dashboard/notes">NOTES</NavLink></li>
+          <li><NavLink to="dashboard/addClasses">ADD SCHEDULE</NavLink></li>
           <li><NavLink to="/">SIGN OUT</NavLink></li>
         </>
       ) : (

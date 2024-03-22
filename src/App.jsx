@@ -21,6 +21,7 @@ import DashboardPlanningPage from './Software/DashboardPlanningPage/DashboardPla
 import DashboardProfilePage from './Software/DashboardProfilePage/DashboardProfilePage'
 import DashboardSchedulePage from './Software/DashboardSchedulePage/DashboardSchedulePage'
 import DashboardNotesPage from './Software/DashboardNotesPage/DashboardNotesPage'
+import DashboardAddClassesPage from './Software/DashboardAddClasses/DashboardAddClasses'
 
 
 function App() {
