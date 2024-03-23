@@ -36,7 +36,13 @@ function DashboardAddClassesPage() {
 
   const handleSubmit = (el) => {
     el.preventDefault();
-    axios.post 
+    
+    axios.post('http://localhost:3001/classesdb', {classes})
+    .then(response => {
+        console.log(response)
+        
+    })
+    .catch(err => console.log(err)) 
   }
 
     useEffect(() => {
@@ -53,7 +59,7 @@ function DashboardAddClassesPage() {
             <h1 className="dashboardAddClassesPage-title">Academic planning</h1>
 
 
-            <DashboardTableAdd classes={classes} addClass={addNewClass} onInputChange={handleInputChange}/>
+            <DashboardTableAdd classes={classes} addData={handleSubmit} addClass={addNewClass} onInputChange={handleInputChange}/>
         </div>
     )
 }

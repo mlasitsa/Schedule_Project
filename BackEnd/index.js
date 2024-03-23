@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require("cors");
 const UsersModel = require('./models/Users')
 const bcrypt = require('bcrypt');
+const ClassesModel = require('./models/Classes');
 
 const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser'); 
@@ -176,6 +177,22 @@ app.patch('/user_todos/toggle/:todoId', verifyUser, async (req, res) => {
         }
     } catch (error) {
         res.status(500).json({ message: error.message });
+    }
+});
+
+app.post('/classesdb', async (req, res) => {
+    // Assuming req.body.classes contains the array of class objects
+    const { classes } = req.body; 
+    try {
+        // If ClassesModel expects a single document but you have multiple classes
+        // You might need to iterate over each class and create a document for each.
+        const createdClasses = await Promise.all(classes.map(async (classData) => {
+            return await ClassesModel.create(classData);
+        }));
+        res.json(createdClasses);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Error saving classes to database");
     }
 });
 

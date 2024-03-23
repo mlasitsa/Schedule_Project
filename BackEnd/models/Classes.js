@@ -1,13 +1,21 @@
 const mongoose = require("mongoose");
 
 const ClassesSchema = new mongoose.Schema({
-    // Add here all the info for classes
-    // Add ref for users that techincally will be an array of objects I guess 
-    /* users: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "users"
-    }] */
-})
+  term: String,
+  course: String,
+  sect: String,
+  crn: String,
+  className: String,
+  cr: String,
+  schedule: String,
+  dates: String,
+  instructor: String,
+  seats: String,
+  users: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "user"
+  }]
+});
 
-const Classes = mongoose.model('classes', ClassesSchema);
+const Classes = mongoose.model('Classes', ClassesSchema);
 module.exports = Classes;

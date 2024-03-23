@@ -149,7 +149,7 @@ function DashboardTableAdd(props) {
                 </tbody>
             </table>
 
-            <button>SUBMIT</button>
+            <button onClick={props.addData}>SUBMIT</button>
             <button onClick={props.addClass}>ADD ROW</button>
             <button>DROP</button>
         </div>
