@@ -18,13 +18,14 @@ function DashboardTableAdd(props) {
         <div className=''>
 
             <h4>SELECT TERM</h4>
+          
             <input
             type="text"
             placeholder='Enter Term'
             name="term"
             required
             value={props.classes.term}
-            onChange={props.onInputChange}
+            onChange={(el) => props.onInputChange(el, index)}
             
             ></input>
 
@@ -43,7 +44,7 @@ function DashboardTableAdd(props) {
                     </tr>
                 </thead>
                 <tbody>
-                {props.classes.map((index) => (
+                {props.classes.map((clasItem, index) => (
                     <tr key={index}>
                     
                         <td>
@@ -52,8 +53,8 @@ function DashboardTableAdd(props) {
                                 placeholder=''
                                 name="course"
                                 required
-                                value={props.classes.course}
-                                onChange={props.onInputChange}>
+                                value={clasItem.course}
+                                onChange={(el) => props.onInputChange(el, index)}>
                             </input>
                         </td>
 
@@ -63,8 +64,8 @@ function DashboardTableAdd(props) {
                                 placeholder=''
                                 name="sect"
                                 required
-                                value={props.classes.sect}
-                                onChange={props.onInputChange}>
+                                value={clasItem.sect}
+                                onChange={(el) => props.onInputChange(el, index)}>
                             </input>
                         </td>
 
@@ -74,8 +75,8 @@ function DashboardTableAdd(props) {
                                 placeholder=''
                                 name="crn"
                                 required
-                                value={props.classes.crn}
-                                onChange={props.onInputChange}>
+                                value={clasItem.crn}
+                                onChange={(el) => props.onInputChange(el, index)}>
                             </input>
                         </td>
 
@@ -85,8 +86,8 @@ function DashboardTableAdd(props) {
                                 placeholder=''
                                 name="className"
                                 required
-                                value={props.classes.className}
-                                onChange={props.onInputChange}>
+                                value={clasItem.className}
+                                onChange={(el) => props.onInputChange(el, index)}>
                             </input>
                         </td>
 
@@ -96,8 +97,8 @@ function DashboardTableAdd(props) {
                                 placeholder=''
                                 name="cr"
                                 required
-                                value={props.classes.cr}
-                                onChange={props.onInputChange}>
+                                value={clasItem.cr}
+                                onChange={(el) => props.onInputChange(el, index)}>
                             </input>
                         </td>
 
@@ -107,8 +108,8 @@ function DashboardTableAdd(props) {
                                 placeholder=''
                                 name="schedule"
                                 required
-                                value={props.classes.schedule}
-                                onChange={props.onInputChange}>
+                                value={clasItem.schedule}
+                                onChange={(el) => props.onInputChange(el, index)}>
                             </input>
                         </td>
 
@@ -118,8 +119,8 @@ function DashboardTableAdd(props) {
                                 placeholder=''
                                 name="dates"
                                 required
-                                value={props.classes.dates}
-                                onChange={props.onInputChange}>
+                                value={clasItem.dates}
+                                onChange={(el) => props.onInputChange(el, index)}>
                             </input>
                         </td>
 
@@ -129,8 +130,8 @@ function DashboardTableAdd(props) {
                                 placeholder=''
                                 name="instructor"
                                 required
-                                value={props.classes.instructor}
-                                onChange={props.onInputChange}>
+                                value={clasItem.instructor}
+                                onChange={(el) => props.onInputChange(el, index)}>
                             </input>
                         </td>
 
@@ -140,8 +141,8 @@ function DashboardTableAdd(props) {
                                 placeholder=''
                                 name="seats"
                                 required
-                                value={props.classes.seats}
-                                onChange={props.onInputChange}>
+                                value={clasItem.seats}
+                                onChange={(el) => props.onInputChange(el, index)}>
                             </input>
                         </td>
                     </tr>

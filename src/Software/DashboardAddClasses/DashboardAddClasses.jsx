@@ -32,6 +32,7 @@ function DashboardAddClassesPage() {
       idx === index ? { ...classItem, [name]: value } : classItem
     );
     setClasses(updatedClasses);
+    console.log(classes)
   };
 
   const handleSubmit = (el) => {
