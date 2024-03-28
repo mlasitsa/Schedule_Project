@@ -55,6 +55,15 @@
     font-weight: bold;
 }
 
+.featuresPage > * {
+    margin-top: 200px; /* Adjust the value as needed */
+  }
+  
+  /* Removes the margin from the last child to prevent extra space at the bottom */
+  .featuresPage > *:last-child {
+    margin-bottom: 0;
+  }
+
 @media (max-width: 600px) {
 
 .middleDisc {
