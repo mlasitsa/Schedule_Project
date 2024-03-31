@@ -20,7 +20,9 @@ This project was developed using a comprehensive stack of tools and technologies
 - **Database**: MongoDB - a NoSQL database used for storing application data.
 - **ORM/ODM Library**: Mongoose - for data modeling and schema validation in MongoDB applications.
 - **Client-side HTTP Request Library**: Axios - for making HTTP requests to the backend from the frontend, facilitating communication between client-side and server-side.
-- **Authentication**: JSON Web Token (JWT) - for securely transmitting information between parties as a JSON object. Hashing is used for securely storing passwords.
+- **Authentication**:
+  - **JSON Web Token (JWT)**: for securely transmitting information between parties as a JSON object.
+  - **bcrypt**: for securely hashing and storing passwords, enhancing the security of user authentication processes.
 - **Animation Library**: Framer Motion - for adding animations to React applications.
 - **Package Manager**: NPM - for managing project dependencies.
 - **Development Tools**:
