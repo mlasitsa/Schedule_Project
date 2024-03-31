@@ -25,7 +25,7 @@ function DashboardTableAdd(props) {
             name="term"
             required
             value={props.classes.term}
-            onChange={(el) => props.onInputChange(el)}
+            onChange={(el) => props.setTerm(el.target.value)}
             
             ></input>
 

@@ -8,7 +8,6 @@ import axios from 'axios';
 function DashboardAddClassesPage() {
 
   const [classes, setClasses] = useState([{
-    term: '',
     course: '',
     sect: '',
     crn: '',
@@ -20,8 +19,22 @@ function DashboardAddClassesPage() {
     seats: ''
   }])
 
+  const initialState = [{
+    course: '',
+    sect: '',
+    crn: '',
+    className: '',
+    cr: '',
+    schedule: '',
+    dates: '',
+    instructor: '',
+    seats: ''
+  }];
+
+  const [term, setTerm] = useState();
+
   const addNewClass = () => {
-    const newClass = { term: '', course: '', crn: '', className: '', cr: '', schedule: '', dates: '', instructor: '', seats: '' };
+    const newClass = {course: '', crn: '', className: '', cr: '', schedule: '', dates: '', instructor: '', seats: '' };
     setClasses([...classes, newClass]);
     console.log(classes);
   };
@@ -38,10 +51,16 @@ function DashboardAddClassesPage() {
   const handleSubmit = (el) => {
     el.preventDefault();
     
-    axios.post('http://localhost:3001/classesdb', {classes})
+    const classesWithTerm = classes.map((classItem) => ({
+      ...classItem,
+      term: term
+  }));
+
+  setClasses(classesWithTerm);
+    axios.post('http://localhost:3001/classesdb', { classes: classesWithTerm})
     .then(response => {
         console.log(response)
-        
+        setClasses(initialState);
     })
     .catch(err => console.log(err)) 
   }
@@ -60,7 +79,7 @@ function DashboardAddClassesPage() {
             <h1 className="dashboardAddClassesPage-title">Academic planning</h1>
 
 
-            <DashboardTableAdd classes={classes} addData={handleSubmit} addClass={addNewClass} onInputChange={handleInputChange}/>
+            <DashboardTableAdd classes={classes} addData={handleSubmit} addClass={addNewClass} onInputChange={handleInputChange} setTerm={setTerm}/>
         </div>
     )
 }
