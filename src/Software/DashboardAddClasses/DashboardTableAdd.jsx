@@ -15,21 +15,25 @@ function DashboardTableAdd(props) {
       }, []);
 
     return (
-        <div className=''>
+        <div className='dashboardPlanningPage-table-add'>
 
-            <h4>SELECT TERM</h4>
-          
-            <input
-            type="text"
-            placeholder='Enter Term'
-            name="term"
-            required
-            value={props.classes.term}
-            onChange={(el) => props.setTerm(el.target.value)}
+            <div className='dashboardPlanningPage-h4-input'> 
+                <h4 className='dashboardPlanningPage-table-add-select-term-title'>SELECT TERM</h4>
             
-            ></input>
+                <input
+                className='dashboardPlanningPage-term-input'
+                type="text"
+                placeholder='Enter Term'
+                name="term"
+                required
+                value={props.classes.term}
+                onChange={(el) => props.setTerm(el.target.value)}
+                
+                ></input>
+            </div>
+            
 
-            <table className='dashboardPlanningPage-table'>
+            <table className='dashboardPlanningPage-classes-table'>
                 <thead>
                     <tr>
                         <th>COURSE</th>
@@ -149,10 +153,18 @@ function DashboardTableAdd(props) {
                       ))}
                 </tbody>
             </table>
+            
+            <div className='dashboardPlanningPage-4btns'>
+                <div className='dashboardPlanningPage-split-by-2'>
+                    <button className='dashboardPlanningPage-submit-btn' onClick={props.addData}>SUBMIT</button>
+                     <button className='dashboardPlanningPage-load-btn'>LOAD EXISTING SCHEDULE</button>
+                </div>
 
-            <button onClick={props.addData}>SUBMIT</button>
-            <button onClick={props.addClass}>ADD ROW</button>
-            <button>DROP</button>
+                <div className='dashboardPlanningPage-split-by-2'>
+                    <button className='dashboardPlanningPage-add-row-btn' onClick={props.addClass}>ADD ROW</button>
+                    <button className='dashboardPlanningPage-drop-btn'>DROP</button>
+                </div>
+            </div>
         </div>
     )
 }

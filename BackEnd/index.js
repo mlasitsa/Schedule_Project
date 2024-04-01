@@ -181,11 +181,8 @@ app.patch('/user_todos/toggle/:todoId', verifyUser, async (req, res) => {
 });
 
 app.post('/classesdb', async (req, res) => {
-    // Assuming req.body.classes contains the array of class objects
     const { classes } = req.body; 
     try {
-        // If ClassesModel expects a single document but you have multiple classes
-        // You might need to iterate over each class and create a document for each.
         const createdClasses = await Promise.all(classes.map(async (classData) => {
             return await ClassesModel.create(classData);
         }));
@@ -195,6 +192,18 @@ app.post('/classesdb', async (req, res) => {
         res.status(500).send("Error saving classes to database");
     }
 });
+
+app.get('/getclasses', async (req,res) => {
+    const {classes} = req.body;
+    try {
+        const termClasses = await Promise.all(classes.map(async (classData) => {
+            if (term !== classesData.term) {
+                return res.status(404).json("Classes not found");
+            }
+            res.json(termClasses);
+        }));
+    } 
+})
 
 
 app.listen(3001, () => {

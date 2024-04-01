@@ -1,0 +1,91 @@
+.dashboardPlanningPage-table-add {
+   
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.dashboardPlanningPage-h4-input {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboardPlanningPage-table-add-select-term-title {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+
+.dashboardPlanningPage-term-input {
+    display: block;
+    margin:  40px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border-color:#FAE347;
+}
+
+.dashboardPlanningPage-classes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white; 
+
+}
+
+.dashboardPlanningPage-classes-table th, .dashboardPlanningPage-classes-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.dashboardPlanningPage-classes-table th {
+    background-color: #F7CA3E;
+}
+
+.dashboardPlanningPage-4btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dashboardPlanningPage-split-by-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboardPlanningPage-submit-btn, 
+.dashboardPlanningPage-add-row-btn,
+.dashboardPlanningPage-drop-btn,
+.dashboardPlanningPage-load-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.dashboardPlanningPage-submit-btn {
+    background-color: #4CAF50; 
+    color: white;
+    border: 3px solid #4CAF50;
+}
+
+.dashboardPlanningPage-add-row-btn {
+    background-color: #4CAF50; 
+    color: white;
+    border: 3px solid #4CAF50;
+}
+
+.dashboardPlanningPage-drop-btn {
+    background-color: #B9DCE1;
+    color: white;
+    border: 3px solid #f44336;
+}
+
+.dashboardPlanningPage-load-btn {
+    background-color: #B9DCE1;
+    border: 3px solid #FAE347;
+    color: white;
+}

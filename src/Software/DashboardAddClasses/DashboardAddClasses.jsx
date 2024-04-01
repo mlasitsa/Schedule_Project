@@ -75,7 +75,7 @@ function DashboardAddClassesPage() {
       }, []);
 
     return (
-        <div className=''>
+        <div className='dashboardAddClassesPage-add-classes'>
             <h1 className="dashboardAddClassesPage-title">Academic planning</h1>
 
 
