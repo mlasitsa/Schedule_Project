@@ -193,17 +193,17 @@ app.post('/classesdb', async (req, res) => {
     }
 });
 
-app.get('/getclasses', async (req,res) => {
-    const {classes} = req.body;
-    try {
-        const termClasses = await Promise.all(classes.map(async (classData) => {
-            if (term !== classesData.term) {
-                return res.status(404).json("Classes not found");
-            }
-            res.json(termClasses);
-        }));
-    } 
-})
+// app.get('/getclasses', async (req,res) => {
+//     const {classes} = req.body;
+//     try {
+//         const termClasses = await Promise.all(classes.map(async (classData) => {
+//             if (term !== classesData.term) {
+//                 return res.status(404).json("Classes not found");
+//             }
+//             res.json(termClasses);
+//         }));
+//     } 
+// })
 
 
 app.listen(3001, () => {
