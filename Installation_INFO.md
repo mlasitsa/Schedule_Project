@@ -3,16 +3,25 @@
 ## Clone and Setup the Project
 To clone the repository and set up both the frontend and backend, run the following commands in your terminal:
 
+## Clone the repository and navigate to the project directory
 ```bash
-# Clone the repository and navigate to the project directory
 git clone https://github.com/mlasitsa/Schedule_Project.git
-cd Schedule_Project
+```
 
-# Install and start the frontend in a new terminal
-npm install
-npm run dev &
+## Make sure you are in this main folder
+```bash
+cd Schedule_Project
+```
 
 # Navigate to the backend, install dependencies, and start the server
-cd backend
-npm install
-node index.js
+```bash
+cd .\BackEnd
+npm install - WILL INSTALL ALL DEPENDECIES
+node index.js - RUNS SERVER
+```
+
+# Install and start the frontend in a new terminal
+```bash
+npm install - WILL INSTALL ALL DEPENDECIES
+npm run dev - RUNS APPLICATION
+```
