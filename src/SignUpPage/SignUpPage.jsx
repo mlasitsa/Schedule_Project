@@ -27,7 +27,13 @@ function SignUpPage() {
             setPasswordError('Password does not match');
             return;
         }
-
+        var PasswordMatch = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}/g 
+        if (!password.match(PasswordMatch)) {
+            setPasswordError('Password is too weak!');
+            return;
+        } else {
+            setPasswordError('');
+        }
         axios.post('http://localhost:3001/signup', {fullName, email, password})
         .then(response => {
             console.log(response)
