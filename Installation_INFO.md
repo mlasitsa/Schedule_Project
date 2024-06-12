@@ -1,4 +1,4 @@
-# Installation Guide for Schedule_Project
+# Installation Guide for Schedule Project
 
 ## Clone and Setup the Project
 To clone the repository and set up both the frontend and backend, run the following commands in your terminal:
