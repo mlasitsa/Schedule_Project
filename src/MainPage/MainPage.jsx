@@ -61,7 +61,7 @@ function MainPage() {
       </div>
 
       <div className="buttons">
-        <button className="loginBtn" onClick={toLogIn}>LOGIN</button>
+        <button className="signUpBtn" onClick={toLogIn}>LOGIN</button>
         <button className="signUpBtn" onClick={toSignUp}>SIGN UP</button>
       </div>
       

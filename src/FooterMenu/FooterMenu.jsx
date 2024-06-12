@@ -58,6 +58,9 @@ function FooterMenu() {
                         <a className='footerMenu-a' href='https://www.linkedin.com/in/maxlasitsa/' target="_blank" rel="noopener noreferrer">
                             <p>Maxim Lasitsa</p>
                         </a>
+                        <a className='footerMenu-a' href='https://www.linkedin.com/in/malcolm-tees-debeyer-71661b160/' target="_blank" rel="noopener noreferrer">
+                            <p>Malcolm Tees-DeBeyer</p>
+                        </a>
                     </div>
                     <div className='footerMenu-footer-links-div'>
                         <h4>Company</h4>
