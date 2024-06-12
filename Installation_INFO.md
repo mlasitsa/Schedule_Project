@@ -38,3 +38,14 @@ npm run dev - RUNS APPLICATION
 ```bash
 mongodb+srv://mlasitsa:maxlas@schedulecluster.fdnhkev.mongodb.net/
 ```
+
+# Log in to see software page 
+
+## Use these credentials to log in 
+
+```bash
+login: a@a.com
+password: 12345678aA!
+```
+
+
