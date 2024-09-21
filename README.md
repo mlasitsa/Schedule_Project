@@ -1,5 +1,8 @@
 # Schedule_Project
 
+## Warning Notice !
+This is my first Full-Stack Web Project I was working on. In react one of the main features is using reusable components with props pass and lifting state up if needed. Here I didnt follow this approach just because I was new to react. I am planning to rewrite everything in a proper way as well as finish thi project once I have more time. Currently, I have school, focus on Data Structures and Algorithms, have 2 jobs, play hockey and also engaged into the process of improving college curriculum for CS classes. During my full time and currently part time internship as Full-Stack Web Dev I have already used this feature of React, but unfortunately I am not allowed to share that code. Thank you!
+
 ## Description
 I am in the process of developing an innovative academic planning platform designed to streamline the scheduling, enrollment, and tracking of academic progress for students, faculty, and support services. This platform seeks to transform educational administration by integrating personalized scheduling tools, comprehensive data analytics, and a collaborative interface. The goal is to enhance the efficiency of educational administration, improve student outcomes, and foster a more connected academic community. By addressing the complexities of academic planning and management, this platform aims to offer a smarter, more effective solution for managing academic life.
 
