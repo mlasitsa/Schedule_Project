@@ -21,7 +21,6 @@ This project was developed using a comprehensive stack of tools and technologies
 
 - **Programming Language**: JavaScript - for both frontend and backend development. The project is also exploring the potential use of TypeScript to enhance type safety and developer productivity.
 - **Frontend Framework**: React.js - for building interactive user interfaces, and Next.js - for server-side rendering and generating static websites.
-- **State Management**: Redux - for managing and centralizing application state, enhancing predictability and maintainability of the code.
 - **Backend Framework**: Express.js - a web application framework for Node.js, designed for building web applications and APIs.
 - **Runtime Environment**: Node.js - for executing JavaScript code server-side.
 - **Database**: MongoDB - a NoSQL database used for storing application data.
