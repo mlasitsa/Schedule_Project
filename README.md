@@ -7,8 +7,8 @@ This is my first Full-Stack Web Project I was working on. In react one of the ma
 I am in the process of developing an innovative academic planning platform designed to streamline the scheduling, enrollment, and tracking of academic progress for students, faculty, and support services. This platform seeks to transform educational administration by integrating personalized scheduling tools, comprehensive data analytics, and a collaborative interface. The goal is to enhance the efficiency of educational administration, improve student outcomes, and foster a more connected academic community. By addressing the complexities of academic planning and management, this platform aims to offer a smarter, more effective solution for managing academic life.
 
 ### Videos
-- **Project Design Overview**: Watch the video [here](https://www.youtube.com/watch?v=eSUVnpdBKCQ) for a comprehensive overview of the project's design.
-- **Project Demonstration**: For a detailed walkthrough of how the project works, check out the video [here](https://youtu.be/ODAoq3cxJ8I).
+- **Project Design Overview**: Watch the video [here](https://www.youtube.com/watch?v=pJl45jz98rM) for a comprehensive overview of the project's design.
+- **Project Demonstration**: For a detailed walkthrough of how the project works, check out the video [here](https://www.youtube.com/watch?v=rnALg_9zU7A).
 
 ## Features
 - **Efficient Scheduling**: Utilizes cutting-edge algorithms to optimize scheduling, ensuring maximum efficiency.
